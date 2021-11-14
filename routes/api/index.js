@@ -17,7 +17,9 @@ const allWorkouts = await Workout.aggregate([
 router.post ("/workouts", async (req, res) => {
 const newWorkout = await Workout.create({})
 res.json(newWorkout)
+
 });
+
 
 router.put ("/workouts/:id", async (req, res) => {
     const updateWorkout = await Workout.findByIdAndUpdate(req.params.id,
